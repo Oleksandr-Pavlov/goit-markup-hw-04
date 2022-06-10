@@ -1,2 +1,2 @@
-# goit-markup-hw-03
-added flex box
+# goit-markup-hw-04
+added backgrounds and icons
