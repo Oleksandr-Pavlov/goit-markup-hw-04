@@ -50,6 +50,8 @@ img {
 }
 
 .title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -147,7 +149,8 @@ header .logo {
 }
 
 .contacts-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -156,6 +159,11 @@ header .logo {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .nav-link:hover,
@@ -170,11 +178,18 @@ header .logo {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin: 0 auto;
+  max-width: 1600px;
 
-  background-color: #2f303a;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.hero-container {
+.hero-content {
   margin: 0 auto;
   max-width: 696px;
 }
@@ -232,6 +247,19 @@ header .logo {
   margin-right: 0;
 }
 
+.features-thumb {
+  margin-bottom: 30px;
+  padding: 25px 0;
+
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.features-icon {
+  display: block;
+  margin: auto;
+}
+
 .features-item-title {
   margin-bottom: 10px;
 
@@ -251,10 +279,6 @@ header .logo {
 
 /* -----------------SERVICES----------------- */
 
-.services-title {
-  margin-bottom: 50px;
-}
-
 .services-list {
   display: flex;
 }
@@ -273,15 +297,13 @@ header .logo {
   background-color: #f5f4fa;
 }
 
-.team-title {
-  margin-bottom: 50px;
-}
-
 .team-list {
   display: flex;
 }
 
 .team-item {
+  max-width: 270px;
+
   background-color: var(--primary-bcg-color);
   margin-right: var(--element-gap);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -307,12 +329,79 @@ header .logo {
 }
 
 .team-text {
+  margin-bottom: 16px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--text-color);
   text-align: center;
+}
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-soc-item {
+  margin-right: 10px;
+}
+.team-soc-item:last-child {
+  margin-right: 0;
+}
+
+.team-soc-link {
+  display: block;
+  max-width: 44px;
+  max-height: 44px;
+  padding: 12px;
+
+  color: #afb1b8;
+}
+
+.team-soc-icon {
+  fill: currentColor;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  color: #fff;
+}
+
+/* -----------------CLIENTS----------------- */
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-item {
+  margin-right: var(--element-gap);
+}
+.clients-item:last-child {
+  margin-right: 0;
+}
+
+.clients-link {
+  display: block;
+  padding: 16px 32px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+
+.clients-icon {
+  color: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid #2196f3;
+  color: var(--accent-color);
 }
 
 /* -----------------PORTFOLIO----------------- */
@@ -376,6 +465,11 @@ header .logo {
   margin-bottom: var(--element-gap);
 }
 
+.card-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .card-item-bottom {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
@@ -404,6 +498,10 @@ header .logo {
   padding: 60px 0;
 
   background-color: #2f303a;
+}
+
+.footer-container {
+  display: flex;
 }
 
 .logo-white {
@@ -439,4 +537,52 @@ footer .logo {
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
+}
+
+.footer-soc strong {
+  display: block;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--text-color-secondary);
+}
+
+.footer-soc {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+
+.footer-soc-list {
+  display: flex;
+}
+
+.footer-soc-item {
+  margin-right: 10px;
+}
+.footer-soc-item:last-child {
+  margin-right: 0;
+}
+
+.footer-soc-link {
+  display: block;
+  max-width: 44px;
+  max-height: 44px;
+  padding: 12px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.footer-soc-icon {
+  fill: currentColor;
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
 }
